@@ -1,0 +1,12 @@
+<div class ="container">
+<h1><%= @book.title %> <small>by <%= @book.author %></small></h1>
+<ul>
+  <li>Ranked: <%= @book.vote%></li>
+  <li><%=@book.description%></li>
+  <li><%= button_to 'Upvote', upvote_book_path(@book.id) %></li>
+  <li><%= link_to 'Edit', edit_book_path(@book.id) %></li>
+  <li><%= button_to 'Delete', book_path(@book.id), data: {confirm: 'Are you sure?'}, method: :delete %></li>
+  <li><%= link_to 'View all books', books_path %></li>
+  <li><%= link_to 'View all media', root_path %></li>
+</ul>
+</div>

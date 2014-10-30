@@ -1,0 +1,19 @@
+<div class = "container">
+<table>
+  <tr>
+    <th>Ranking</th>
+    <th>Name</th>
+    <th>Upvote</th>
+  </tr>
+    <% @movies.each do |movie| %>
+    <tr>
+    <td><%= movie.vote %></td>
+    <td><%= link_to movie.title, movie_path(movie.id) %> </td>
+    <td><%= button_to 'Upvote', upvote_movie_path(movie), method: :post%></td>
+    </tr>
+    <% end %>
+</table>
+
+<%= link_to "View all media", root_path, class: "button" %>
+<%= link_to "Add a movie ", new_movie_path, class: "button" %>
+</div>

@@ -1,0 +1,12 @@
+<div class = "container">
+<h1><%= @movie.title %> <small>directed by <%= @movie.director %></small> </h1>
+<ul>
+  <li>Ranked: <%= @movie.vote %></li>
+  <li><%= @movie.description %></li>
+  <li><%= button_to 'Upvote', upvote_movie_path(@movie)%></li>
+  <li><%= link_to 'Edit', edit_movie_path(@movie.id)%></li>
+  <li><%= button_to 'Delete', movie_path(@movie.id), data: {confirm: "Are you sure?"}, method: :delete %></li>
+  <li><%= link_to 'View all movies', movies_path %></li>
+  <li><%= link_to 'View all media', root_path %></li>
+</ul>
+</div>

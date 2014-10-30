@@ -1,0 +1,7 @@
+<h2>New movie</h2>
+<%= form_for @movie do |f| %>
+Title: <%= f.text_field :title, placeholder: 'Movie title' %>
+Director: <%= f.text_field :director, placeholder: 'Movie director' %>
+Description: <%= f.text_field :description, placeholder: 'Short movie description. No spoilers!' %>
+<%= f.submit %>
+<% end %>

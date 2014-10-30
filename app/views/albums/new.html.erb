@@ -1,0 +1,7 @@
+<h2>New album</h2>
+<%= form_for @album do |f| %>
+  Title: <%= f.text_field :title, placeholder: 'Album title' %>
+  Artist: <%= f.text_field :artist, placeholder: 'Album artist' %>
+  Description: <%= f.text_field :description, placeholder: 'Short album description. Keep it neutral.' %>
+  <%= f.submit %>
+<% end %>

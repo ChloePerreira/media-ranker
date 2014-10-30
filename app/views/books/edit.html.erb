@@ -1,0 +1,8 @@
+<%= form_for(@book, url: book_path(@book.id)) do |f| %>
+  <ul>
+    <li>Title: <%= f.text_field :title %></li>
+    <li>Author: <%= f.text_field :author %> </li>
+    <li>Description: <%= f.text_field :description %></li>
+  </ul>
+  <%= f.submit %>
+<% end %>
